@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caseirinho Ateliê Gourmet - Doces e Bolos Artesanais</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Botão Flutuante WhatsApp -->
+    <a href="#" class="whatsapp-btn" id="whatsappBtn" title="Nos envie uma mensagem">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Botão Admin -->
+    <button class="admin-btn" id="adminBtn">
+        <i class="fas fa-lock"></i>
+    </button>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="brand-name" id="heroTitle">Caseirinho Ateliê Gourmet</h1>
+                <p class="tagline" id="heroTagline">Amor e sabor em cada detalhe 🍰</p>
+                <button class="btn btn-primary" id="heroBtn">Fazer Pedido no WhatsApp</button>
+            </div>
+        </div>
+        <div class="hero-background">
+            <img id="heroBgImg" src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=1200&q=80" alt="Doces Gourmet">
+        </div>
+    </section>
+
+    <!-- PRODUTOS SECTION -->
+    <section class="products" id="produtos">
+        <div class="container">
+            <h2 class="section-title">Nossos Produtos</h2>
+            <p class="section-subtitle">Feitos com amor, ingredientes premium e muito carinho</p>
+            
+            <div class="products-grid" id="productsGrid">
+                <!-- Produtos serão carregados via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- GALERIA SECTION -->
+    <section class="gallery" id="galeria">
+        <div class="container">
+            <h2 class="section-title">Nossa Galeria</h2>
+            <p class="section-subtitle">Veja a arte em cada criação</p>
+            
+            <div class="gallery-grid" id="galleryGrid">
+                <!-- Galeria será carregada via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- SOBRE SECTION -->
+    <section class="about" id="sobre">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title">Sobre Nós</h2>
+                    <p id="aboutText">
+                        Na Caseirinho Ateliê Gourmet, cada doce é uma obra de arte. Nós utilizamos apenas ingredientes 
+                        de primeira qualidade, sem conservantes ou aditivos desnecessários. Cada receita é desenvolvida 
+                        com dedicação e carinho, resultando em produtos que agradam ao paladar mais exigente. 
+                        <br><br>
+                        Acreditamos que um doce feito com amor transmite sentimentos especiais, por isso garantimos 
+                        qualidade superior em cada pedido. Seja para celebrações ou para saborear no dia a dia, 
+                        estamos aqui para tornar seus momentos ainda mais doces!
+                    </p>
+                </div>
+                <div class="about-image">
+                    <img id="aboutImg" src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=500&q=80" alt="Sobre">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTATO SECTION -->
+    <section class="contact" id="contato">
+        <div class="container">
+            <h2 class="section-title">Entre em Contato</h2>
+            <p class="section-subtitle">Vamos criar doces felizes juntos!</p>
+            
+            <div class="contact-grid">
+                <div class="contact-item" id="whatsappContact">
+                    <i class="fab fa-whatsapp"></i>
+                    <h3>WhatsApp</h3>
+                    <p id="whatsappNum">(38) 99999-9999</p>
+                    <a href="#" class="contact-link" id="whatsappLink">Enviar mensagem</a>
+                </div>
+                
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <h3>Telefone</h3>
+                    <p id="phone">(38) 3821-9999</p>
+                    <a href="tel:" id="phoneLink" class="contact-link">Ligar</a>
+                </div>
+                
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Localização</h3>
+                    <p id="address">Janaúba - MG</p>
+                    <a href="#" class="contact-link">Ver no mapa</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Caseirinho Ateliê Gourmet</h3>
+                    <p>Amor e sabor em cada detalhe 🍰</p>
+                </div>
+                <div class="footer-socials">
+                    <a href="#" id="instagramLink" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" id="facebookLink" title="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" id="whatsappFooter" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Caseirinho Ateliê Gourmet. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODAL ADMIN -->
+    <div class="modal" id="adminModal">
+        <div class="modal-content admin-login" id="adminLoginForm">
+            <span class="close" id="closeModal">&times;</span>
+            <h2>Área do Administrador</h2>
+            <form id="loginForm">
+                <input type="password" id="password" placeholder="Digite a senha" required>
+                <button type="submit" class="btn btn-primary">Entrar</button>
+            </form>
+            <p class="admin-hint">Dica: a senha padrão é "admin123"</p>
+        </div>
+        
+        <div class="modal-content admin-panel" id="adminPanel" style="display: none;">
+            <span class="close" id="closeAdminPanel">&times;</span>
+            <h2>Painel de Administração</h2>
+            
+            <div class="admin-tabs">
+                <button class="tab-btn active" data-tab="edit-texts">Editar Textos</button>
+                <button class="tab-btn" data-tab="manage-products">Gerenciar Produtos</button>
+                <button class="tab-btn" data-tab="manage-gallery">Gerenciar Galeria</button>
+                <button class="tab-btn" data-tab="site-settings">Configurações</button>
+                <button class="tab-btn logout" id="logoutBtn">Sair</button>
+            </div>
+
+            <!-- TAB: EDITAR TEXTOS -->
+            <div class="tab-content active" id="tab-edit-texts">
+                <h3>Editar Textos do Site</h3>
+                
+                <div class="form-group">
+                    <label>Título da Marca (Hero)</label>
+                    <input type="text" id="editHeroTitle" placeholder="Caseirinho Ateliê Gourmet">
+                    <button class="btn btn-small" onclick="saveField('heroTitle', 'heroTitle')">Salvar</button>
+                </div>
+
+                <div class="form-group">
+                    <label>Tagline</label>
+                    <input type="text" id="editHeroTagline" placeholder="Amor e sabor em cada detalhe 🍰">
+                    <button class="btn btn-small" onclick="saveField('heroTagline', 'heroTagline')">Salvar</button>
+                </div>
+
+                <div class="form-group">
+                    <label>Sobre Nós</label>
+                    <textarea id="editAboutText" rows="5" placeholder="Texto sobre a padaria"></textarea>
+                    <button class="btn btn-small" onclick="saveField('aboutText', 'aboutText')">Salvar</button>
+                </div>
+
+                <div class="form-group">
+                    <label>WhatsApp</label>
+                    <input type="text" id="editWhatsapp" placeholder="(38) 99999-9999">
+                    <button class="btn btn-small" onclick="saveField('whatsapp', 'whatsappNum')">Salvar</button>
+                </div>
+
+                <div class="form-group">
+                    <label>Telefone</label>
+                    <input type="text" id="editPhone" placeholder="(38) 3821-9999">
+                    <button class="btn btn-small" onclick="saveField('phone', 'phone')">Salvar</button>
+                </div>
+
+                <div class="form-group">
+                    <label>Endereço</label>
+                    <input type="text" id="editAddress" placeholder="Janaúba - MG">
+                    <button class="btn btn-small" onclick="saveField('address', 'address')">Salvar</button>
+                </div>
+            </div>
+
+            <!-- TAB: GERENCIAR PRODUTOS -->
+            <div class="tab-content" id="tab-manage-products">
+                <h3>Gerenciar Produtos</h3>
+                
+                <form id="addProductForm" class="product-form">
+                    <div class="form-group">
+                        <label>Nome do Produto</label>
+                        <input type="text" id="productName" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Categoria</label>
+                        <select id="productCategory" required>
+                            <option value="">Selecione uma categoria</option>
+                            <option value="brigadeiros">Brigadeiros</option>
+                            <option value="bolos">Bolos</option>
+                            <option value="doces">Doces Gourmet</option>
+                            <option value="kits">Kits</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Descrição</label>
+                        <input type="text" id="productDesc">
+                    </div>
+                    <div class="form-group">
+                        <label>URL da Imagem</label>
+                        <input type="text" id="productImage">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Adicionar Produto</button>
+                </form>
+
+                <h3 style="margin-top: 30px;">Produtos Cadastrados</h3>
+                <div id="productsList"></div>
+            </div>
+
+            <!-- TAB: GERENCIAR GALERIA -->
+            <div class="tab-content" id="tab-manage-gallery">
+                <h3>Gerenciar Galeria</h3>
+                
+                <form id="addGalleryForm" class="product-form">
+                    <div class="form-group">
+                        <label>URL da Imagem</label>
+                        <input type="text" id="galleryImage" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Descrição (alt text)</label>
+                        <input type="text" id="galleryAlt" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Adicionar à Galeria</button>
+                </form>
+
+                <h3 style="margin-top: 30px;">Imagens da Galeria</h3>
+                <div id="galleriesList"></div>
+            </div>
+
+            <!-- TAB: CONFIGURAÇÕES -->
+            <div class="tab-content" id="tab-site-settings">
+                <h3>Configurações do Site</h3>
+                
+                <div class="form-group">
+                    <label>Imagem de Fundo (Hero)</label>
+                    <input type="text" id="editHeroBg">
+                    <button class="btn btn-small" onclick="saveField('heroBg', 'heroBgImg')">Salvar</button>
+                </div>
+
+                <div class="form-group">
+                    <label>Imagem da Seção Sobre</label>
+                    <input type="text" id="editAboutBg">
+                    <button class="btn btn-small" onclick="saveField('aboutBg', 'aboutImg')">Salvar</button>
+                </div>
+
+                <div class="form-group">
+                    <label>Link Instagram</label>
+                    <input type="text" id="editInstagram" placeholder="https://instagram.com/">
+                    <button class="btn btn-small" onclick="saveField('instagram', 'instagramLink')">Salvar</button>
+                </div>
+
+                <div class="form-group">
+                    <label>Link Facebook</label>
+                    <input type="text" id="editFacebook" placeholder="https://facebook.com/">
+                    <button class="btn btn-small" onclick="saveField('facebook', 'facebookLink')">Salvar</button>
+                </div>
+
+                <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #ddd;">
+                    <button class="btn btn-danger" onclick="resetAllData()">Resetar Todos os Dados</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+      </html>
